@@ -1,0 +1,62 @@
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
+
+namespace employee.api.Model
+{
+	public class EmployeeDbContext : DbContext
+	{
+		public EmployeeDbContext(DbContextOptions<EmployeeDbContext> options) : base(options)
+		{
+		}
+		public DbSet<EmployeeModel> Employees { get; set; }
+		public DbSet<Department> Departments { get; set; }
+		public DbSet<Designation> Designations { get; set; }
+
+		// Method to call InsertEmployee stored procedure
+		public async Task<int> InsertEmployeeAsync(EmployeeModel model)
+		{
+			var parameters = new[]
+			{
+				new SqlParameter("@Name", model.name),
+				new SqlParameter("@ContactNo", model.contactNo),
+				new SqlParameter("@Email", model.email ?? (object)DBNull.Value),
+				new SqlParameter("@City", model.city ?? (object)DBNull.Value),
+				new SqlParameter("@State", model.state ?? (object)DBNull.Value),
+				new SqlParameter("@Pincode", model.pincode ?? (object)DBNull.Value),
+				new SqlParameter("@AltContactNo", model.altContactNo ?? (object)DBNull.Value),
+				new SqlParameter("@Address", model.address ?? (object)DBNull.Value),
+				new SqlParameter("@DesignationId", model.designationId),
+				new SqlParameter("@CreatedDate", DateTime.Now)
+			};
+
+			return await Database.ExecuteSqlRawAsync("EXEC InsertEmployee @Name, @ContactNo, @Email, @City, @State, @Pincode, @AltContactNo, @Address, @DesignationId, @CreatedDate", parameters);
+		}
+
+		// Method to call UpdateEmployee stored procedure
+		public async Task<int> UpdateEmployeeAsync(EmployeeModel model)
+		{
+			var parameters = new[]
+			{
+				new SqlParameter("@EmployeeId", model.employeeId),
+				new SqlParameter("@Name", model.name),
+				new SqlParameter("@ContactNo", model.contactNo),
+				new SqlParameter("@Email", model.email ?? (object)DBNull.Value),
+				new SqlParameter("@City", model.city ?? (object)DBNull.Value),
+				new SqlParameter("@State", model.state ?? (object)DBNull.Value),
+				new SqlParameter("@Pincode", model.pincode ?? (object)DBNull.Value),
+				new SqlParameter("@AltContactNo", model.altContactNo ?? (object)DBNull.Value),
+				new SqlParameter("@Address", model.address ?? (object)DBNull.Value),
+				new SqlParameter("@DesignationId", model.designationId),
+				new SqlParameter("@ModifiedDate", DateTime.Now)
+			};
+
+			return await Database.ExecuteSqlRawAsync("EXEC UpdateEmployee @EmployeeId, @Name, @ContactNo, @Email, @City, @State, @Pincode, @AltContactNo, @Address, @DesignationId, @ModifiedDate", parameters);
+		}
+
+		// Method to call SelectEmployees stored procedure
+		public async Task<List<EmployeeModel>> SelectEmployeesAsync()
+		{
+			return await Employees.FromSqlRaw("EXEC SelectEmployees").ToListAsync();
+		}
+	}
+}

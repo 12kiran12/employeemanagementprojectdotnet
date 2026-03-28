@@ -1,0 +1,172 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\model\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\model\\employeedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\controllers\\employeemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\controllers\\employeemastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\model\\designation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\model\\designation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\model\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\model\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\model\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\model\\employeemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\controllers\\designationmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\controllers\\designationmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\controllers\\departmentmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\controllers\\departmentmastercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|c:\\users\\kiran\\onedrive\\desktop\\dot net\\employee.api\\employee.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{62F3B20B-96B3-F432-A473-E19D5D7FF7A9}|employee.api\\employee.api.csproj|solutionrelative:employee.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmployeeModel.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\EmployeeModel.cs",
+              "RelativeDocumentMoniker": "employee.api\\Model\\EmployeeModel.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\EmployeeModel.cs",
+              "RelativeToolTip": "employee.api\\Model\\EmployeeModel.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAkwBIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T15:09:13.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmployeeDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\EmployeeDbContext.cs",
+              "RelativeDocumentMoniker": "employee.api\\Model\\EmployeeDbContext.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\EmployeeDbContext.cs",
+              "RelativeToolTip": "employee.api\\Model\\EmployeeDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T13:00:16.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Controllers\\EmployeeMasterController.cs",
+              "RelativeDocumentMoniker": "employee.api\\Controllers\\EmployeeMasterController.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Controllers\\EmployeeMasterController.cs",
+              "RelativeToolTip": "employee.api\\Controllers\\EmployeeMasterController.cs",
+              "ViewState": "AgIAANkAAAAAAAAAAAAAAN4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T16:59:34.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Designation.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\Designation.cs",
+              "RelativeDocumentMoniker": "employee.api\\Model\\Designation.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\Designation.cs",
+              "RelativeToolTip": "employee.api\\Model\\Designation.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T15:05:20.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\Department.cs",
+              "RelativeDocumentMoniker": "employee.api\\Model\\Department.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Model\\Department.cs",
+              "RelativeToolTip": "employee.api\\Model\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T14:52:53.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\appsettings.json",
+              "RelativeDocumentMoniker": "employee.api\\appsettings.json",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\appsettings.json",
+              "RelativeToolTip": "employee.api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-03T15:38:12.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DesignationMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Controllers\\DesignationMasterController.cs",
+              "RelativeDocumentMoniker": "employee.api\\Controllers\\DesignationMasterController.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Controllers\\DesignationMasterController.cs",
+              "RelativeToolTip": "employee.api\\Controllers\\DesignationMasterController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAAKMAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T16:40:02.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DepartmentMasterController.cs",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Controllers\\DepartmentMasterController.cs",
+              "RelativeDocumentMoniker": "employee.api\\Controllers\\DepartmentMasterController.cs",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Controllers\\DepartmentMasterController.cs",
+              "RelativeToolTip": "employee.api\\Controllers\\DepartmentMasterController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-03T15:32:30.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "employee.api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\kiran\\OneDrive\\Desktop\\Dot Net\\employee.api\\employee.api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "employee.api\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-03T15:58:35.573Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

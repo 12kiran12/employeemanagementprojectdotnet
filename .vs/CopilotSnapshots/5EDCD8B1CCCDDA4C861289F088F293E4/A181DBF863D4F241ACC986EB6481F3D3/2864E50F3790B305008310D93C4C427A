@@ -1,0 +1,230 @@
+﻿using employee.api.Model;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+namespace employee.api.Controllers
+{
+	[Route("api/[controller]")]
+	[ApiController]
+	public class EmployeeMasterController : ControllerBase
+	{
+		private readonly EmployeeDbContext _context;
+
+		public EmployeeMasterController(EmployeeDbContext context)
+		{
+			_context = context;
+		}
+
+		// =====================================
+		// GET ALL (Using Stored Procedure)
+		// =====================================
+		[HttpGet]
+		public async Task<IActionResult> GetAll()
+		{
+			try
+			{
+				var employees = await _context.SelectEmployeesAsync();
+				return Ok(employees);
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+		// =====================================
+		// GET BY ID (Using Stored Procedure)
+		// =====================================
+		[HttpGet("{id}")]
+		public async Task<IActionResult> GetById(int id)
+		{
+			try
+			{
+				var employee = await _context.GetEmployeeByIdAsync(id);
+
+				if (employee == null)
+					return NotFound("Employee not found.");
+
+				return Ok(employee);
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+		// =====================================
+		// CREATE (Using Stored Procedure)
+		// =====================================
+		[HttpPost]
+		public async Task<IActionResult> Create([FromBody] EmployeeModel model)
+		{
+			try
+			{
+				if (!ModelState.IsValid)
+					return BadRequest(ModelState);
+
+				// Unique ContactNo check
+				if (await _context.Employees.AnyAsync(x => x.contactNo == model.contactNo))
+					return BadRequest("Contact number already exists.");
+
+				// Unique Email check
+				if (!string.IsNullOrEmpty(model.email) &&
+					await _context.Employees.AnyAsync(x => x.email == model.email))
+					return BadRequest("Email already exists.");
+
+				var result = await _context.InsertEmployeeAsync(model);
+
+				if (result > 0)
+					return Ok("Employee created successfully.");
+
+				return StatusCode(500, "Failed to create employee.");
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+
+		// =====================================
+		// UPDATE (Using Stored Procedure)
+		// =====================================
+		[HttpPut("{id}")]
+		public async Task<IActionResult> Update(int id, [FromBody] EmployeeModel model)
+		{
+			try
+			{
+				if (id != model.employeeId)
+					return BadRequest("ID mismatch.");
+
+				if (!ModelState.IsValid)
+					return BadRequest(ModelState);
+
+				var existing = await _context.Employees.FindAsync(id);
+				if (existing == null)
+					return NotFound("Employee not found.");
+
+				// Unique ContactNo check
+				if (await _context.Employees
+					.AnyAsync(x => x.contactNo == model.contactNo && x.employeeId != id))
+					return BadRequest("Contact number already exists.");
+
+				// Unique Email check
+				if (!string.IsNullOrEmpty(model.email) &&
+					await _context.Employees
+					.AnyAsync(x => x.email == model.email && x.employeeId != id))
+					return BadRequest("Email already exists.");
+
+				var result = await _context.UpdateEmployeeAsync(model);
+
+				if (result > 0)
+					return Ok("Employee updated successfully.");
+
+				return StatusCode(500, "Failed to update employee.");
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+
+		// =====================================
+		// DELETE (Using Stored Procedure)
+		// =====================================
+		[HttpDelete("{id}")]
+		public async Task<IActionResult> Delete(int id)
+		{
+			try
+			{
+				var result = await _context.DeleteEmployeeAsync(id);
+
+				if (result > 0)
+					return Ok("Employee deleted successfully.");
+
+				return NotFound("Employee not found.");
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+		// =====================================
+		// FILTER + SORT + PAGINATION API (Using Stored Procedure)
+		// =====================================
+		[HttpGet("search")]
+		public async Task<IActionResult> Search(
+			string? name,
+			string? city,
+			string? sortBy = "employeeId",
+			string? sortOrder = "asc",
+			int pageNumber = 1,
+			int pageSize = 10)
+		{
+			try
+			{
+				var data = await _context.SearchEmployeesAsync(name, city, sortBy, sortOrder, pageNumber, pageSize);
+
+				return Ok(new
+				{
+					totalRecords = data.Count,
+					pageNumber,
+					pageSize,
+					data
+				});
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+		// =====================================
+		// LOGIN (Using Stored Procedure)
+		// =====================================
+		[HttpPost("login")]
+		public async Task<IActionResult> Login([FromBody] LoginDto model)
+		{
+			try
+			{
+				if (!ModelState.IsValid)
+					return BadRequest(ModelState);
+
+				var user = await _context.LoginEmployeeAsync(model.email, model.contactNo);
+
+				if (user == null)
+					return Unauthorized("Invalid credential.");
+
+				return Ok(new
+				{
+					message = "Login successful",
+					data = new
+					{
+						user.employeeId,
+						user.name,
+						user.email,
+						user.contactNo,
+						user.designationId,
+						user.designationName,
+						user.role
+					}
+				});
+			}
+			catch (Exception ex)
+			{
+				return StatusCode(500, ex.Message);
+			}
+		}
+
+
+	}
+}
