@@ -1,0 +1,27 @@
+# deployment.yaml
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employee-management-app
+  labels:
+    app: employee-management-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: employee-management-app
+
+  template:
+    metadata:
+      labels:
+        app: employee-management-app
+
+    spec:
+      containers:
+        - name: employee-container
+          image: us-central1-docker.pkg.dev/myfirstproject-494406/example-docker-repo/employee-management-app:latest
+          ports:
+            - containerPort: 80
